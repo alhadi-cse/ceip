@@ -1,0 +1,334 @@
+﻿.map-tool
+{  
+    border: 1px outset gray;
+    height:25px;
+    width:25px;
+    
+     
+}
+
+.my-dropdown {
+    height:32px;
+}
+
+
+input[type="radio"]
+        {
+            margin: 4px 4px 4px 4px;    
+        }
+
+input[type="checkbox"] {
+       margin-right:5px;
+        }
+
+
+.span-60 
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 60px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-70
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 70px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-80 
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 80px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-90
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 90px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-100 
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 100px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-110
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 110px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-120
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 120px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-130
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 130px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-140
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 140px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+        .span-150
+        {
+            padding-left: 5px;
+            text-align: left;
+            width: 150px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+.td-header-color {
+    background-color:lightblue;
+    font-weight:bold;
+}
+.td-header-color-right {
+    background-color:lightblue;
+    font-weight:bold;
+    text-align:right;
+}
+/* for progress background */
+.ProgressBackground
+{
+    background-color: #6D7B8D; /* Blue Slate Gray */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    /*
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #C0C0C0;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 1000;
+    */
+    
+}
+.ProgressBackground
+{
+    /* Above everything else, except an UpdateProgressPanel */
+    z-index: 9999 !important;
+}
+.ProgressProcess
+{
+    /* UpdateProgressPanel is above EVERYTHING ELSE, even other modal popups */
+    z-index: 99999999;
+    background-color: #fff;
+    color: #000000;
+    width: 150px;
+    height: 34px;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    bottom: 50%;
+    left: 45%;
+    padding: 5px;
+    border: solid 2px #5D7B9D; /*
+    position: fixed;
+    top: 50%;
+    left: 43%;
+    padding: 10px;
+    width: 150px;
+    z-index: 1001;
+    background-color: #fff;
+    border: solid 1px #000;
+    */
+}
+
+
+
+
+
+/*css for  Modal Popup MessageExtender*/
+.modal-div-msg
+{
+    border: 1px solid #e78f08;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -khtml-border-radius: 4px !important;
+    border-radius: 4px !important;
+    background-color: #fa9300;
+    padding: 0px 2px 2px 2px;
+    width: auto !important;
+    max-width: 400px !important;
+    height: auto !important;
+    max-height: 450px !important;
+    overflow: hidden;
+}
+.modal-div-drag-msg
+{
+    background-color: #fa9300;
+    cursor: move;
+    padding-left: 5px;
+    color: #333;
+    height: 30px !important;
+
+}
+.modal-div-content-msg
+{
+    padding: 10px 2px 2px 5px;
+    color: #000000;
+    background-color: #FFFFFF;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 400px !important;
+
+
+}
+.modal-div-cancel-button-msg
+{
+     color:#fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+
+
+    
+}
+    .modal-div-cancel-button-msg:hover
+    {
+        cursor:pointer;
+        color:#333;
+    }
+
+
+
+.dialog-background
+{
+    border: 2px solid #000000;
+    z-index: 6001;
+    background-image: url('../images/opacity-90.png' );
+    background-repeat: repeat;
+    padding: 2px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+.dialog-background.dialog1 { /* customized styles. this way you can have N dialogs, each one with its own size styles */
+    width: 300px;
+    height: 70%;
+    /*left: 20%; /* ( window's width [100%] - dialog's width [60%] ) / 2 */
+}
+/* media query for mobile devices */
+@media ( max-width: 768px ) {
+    .dialog-background.dialog1 {
+        height: 70%;
+        /*left: 5%;*/ /* ( window's width [100%] - dialog's width [90%] ) / 2 */
+        /*top: 5%;*/
+        width: 300px;
+    }
+}
+.dialog-background-drag
+{
+    background: url('../images/layer-box-title.jpg') repeat-x scroll center bottom rgba(0, 0, 0, 0);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    box-shadow: 0 2px 2px #000;
+    cursor: move;
+    font-weight: bold;
+    height: 29px;
+    padding: 3px 5px 3px 5px;
+    text-shadow: 1px -1px 1px #000;
+    color: white;
+}
+.dialog-background-drag a
+{
+    /*display: block;*/
+    float: right;
+    height: 23px;
+    width: 20px;
+}
+.dialog-background-content
+{
+    border: 1px solid #C0C0C0;
+    padding: 2px;
+    /*overflow: auto;*/
+    color: black;
+}
+.dialog-background .modal-header {
+    /*height: 5%;*/
+}
+.dialog-background .modal-body {
+    /*bottom:10px;*/
+    height: 93%;
+    width:100%;
+}
+.dialog-background .modal-body .div {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+.grid-view
+{
+    color: #000000;
+}
+
+.grid-item-style-left
+{
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
+}
+.grid-item-style-center
+{
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.grid-item-style-right
+{
+    text-align: right;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.grid-item-style-justify
+{
+    text-align: justify;
+    vertical-align: middle;
+    display: table-cell;
+}

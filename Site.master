@@ -1,0 +1,251 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEIP - <%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Styles/mycss.css" rel="stylesheet" />
+
+    <link href="Styles/bootstrap-submenu.css" rel="stylesheet" />
+    
+    <script src="Scripts/jquery-2.2.4.min.js" defer></script>
+    <script src="Scripts/bootstrap-submenu.js" defer></script>
+
+   </head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../">CEIP</a>
+                </div>
+
+                <style>
+                    .dropdown-submenu:hover > .dropdown-menu {
+                        display: block;
+                    }
+                </style>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../About">CEIP-1</a></li>
+                                <li><a href="../Location">Location</a></li>
+                                <li><a href="../Stuffing">Stuffing</a></li>
+                                <li><a href="#">News</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Progress<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../MapViewer">Map Viewer</a></li>
+                                <li><a href="../Monitoring">Monitoring</a></li>
+                                
+                                
+                                <li class="dropdown dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Engineering</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="../Engg_Construction/DesignsView">Designs</a></li>
+
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Construction</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="../Engg_Construction/StatusView">Status</a></li>
+                                                <li><a href="../Engg_Construction/EnggSurveyView">Engineering Survey</a></li>
+                                                <li><a href="../Engg_Construction/QualityMilestoneView">Quality-Milestone</a></li>
+
+                                                <li class="dropdown dropdown-submenu">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Quality-NCRS</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="../Engg_Construction/QualityNCRsEnggWorksView">NCRs for Engineering Works</a></li>
+                                                        <li><a href="../Engg_Construction/QualityNCRsEnvironmentView">NCRs Environment</a></li>
+                                                    </ul>
+                                                </li>
+
+
+                                                <%--<li class="dropdown dropdown-submenu">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"></a>
+                                                    <ul class="dropdown-menu">
+                                                    </ul>
+                                                </li>--%>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">DLP/Maintenance Period</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="../Engg_DLP_Maintenance/EmbankmentWorksView">Embankment Works</a></li>
+                                                <li><a href="../Engg_DLP_Maintenance/DrainageWorksView">Drainage Works</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Post-DLP Sustainability</a>
+                                            <ul class="dropdown-menu">
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="#">Partners</a></li>
+                        <li><a runat="server" href="#">Media</a></li>
+                        <li><a runat="server" href="#">Contact</a></li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Data Entry Form's <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../BoqEntry">BOQ Entry</a></li>
+                                <li><a href="../IndicatorValueEntry">Indicator Data Entry</a></li>
+                                
+                                <li class="dropdown dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Engineering</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="../Engg_Construction/DesignsEntry">Designs</a></li>
+
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Construction</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="../Engg_Construction/StatusEntry">Status</a></li>
+                                                <li><a href="../Engg_Construction/EnggSurveyEntry">Engineering Survey</a></li>
+                                                <li><a href="../Engg_Construction/QualityMilestoneEntry">Quality-Milestone</a></li>
+
+                                                <li class="dropdown dropdown-submenu">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Quality-NCRS</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="../Engg_Construction/QualityNCRsEnggWorksEntry">NCRs for Engineering Works</a></li>
+                                                        <li><a href="../Engg_Construction/QualityNCRsEnvironmentEntry">NCRs Environment</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <%--<li><a href="../Engg_Construction/EmbankmentWorksEntry">Embankment Works</a></li>
+                                                <li><a href="../Engg_Construction/DrainageWorksEntry">Drainage Works</a></li>--%>
+
+                                                <%--<li class="dropdown dropdown-submenu">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"></a>
+                                                    <ul class="dropdown-menu">
+                                                    </ul>
+                                                </li>--%>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">DLP/Maintenance Period</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="../Engg_DLP_Maintenance/EmbankmentWorksEntry">Embankment Works</a></li>
+                                                <li><a href="../Engg_DLP_Maintenance/DrainageWorksEntry">Drainage Works</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Post-DLP Sustainability</a>
+                                            <ul class="dropdown-menu">
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                         </li>
+                    </ul>
+
+                    <script>
+
+                        (function ($) {
+                            $(function () {
+                                $("ul.dropdown-menu [data-toggle=dropdown]").on("click", function (event) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    $(this).parent().siblings().removeClass("open");
+                                    $(this).parent().toggleClass("open");
+                                });
+                            });
+                        })(jQuery);
+
+                        //$(function () {
+                        //    $("ul.dropdown-menu [data-toggle=dropdown]").on("click", function (event) {
+                        //        event.preventDefault();
+                        //        event.stopPropagation();
+                        //        $(this).parent().siblings().removeClass("open");
+                        //        $(this).parent().toggleClass("open");
+                        //        //$(this).parent().closest("li").toggleClass("open");
+                        //    });
+                        //});
+
+                    </script>
+
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="../Account/Register">Register</a></li>
+                                <li><a href="../Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="../Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="footer-content">
+            <div class="container" style="text-align:center;">
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - CEIP-1</p>
+                </footer>
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>
